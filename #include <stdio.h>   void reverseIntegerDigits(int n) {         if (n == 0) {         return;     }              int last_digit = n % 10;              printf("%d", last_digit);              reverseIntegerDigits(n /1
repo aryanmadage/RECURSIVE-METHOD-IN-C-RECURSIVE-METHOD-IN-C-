@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+void reverseIntegerDigits(int n) {
+        if (n == 0) {
+        return;
+    }
+    
+        int last_digit = n % 10;
+    
+        printf("%d", last_digit);
+    
+   
+    reverseIntegerDigits(n / 10);
+}
+
+
+int main() {
+    int num = 12345;
+    printf("Original integer: %d\n", num);
+    
+    printf("Reversed integer (as digits): ");
+
+
+    if (num == 0) {
+        printf("0");
+    } else {
+        reverseIntegerDigits(num);
+    }
+
+
+    printf("\n");
+    return 0;
+}
